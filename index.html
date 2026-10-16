@@ -293,9 +293,66 @@ textarea:focus,input[type=text]:focus{border-color:var(--brand)}
 .toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,16px);background:#1d2129;color:#fff;padding:9px 16px;border-radius:8px;font-size:13.5px;opacity:0;transition:.25s;z-index:60;pointer-events:none}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 
-@media(min-width:1500px){
+/* ===== 电脑端整体放大（笔记本起 ≥900px）===== */
+@media(min-width:900px){
   body{font-size:16px}
+  /* 顶栏 */
+  .topbar{min-height:60px;height:60px}
+  .topbar h1{font-size:17px}
+  .topbar .sub{font-size:13.5px}
+  .topbar .btn{font-size:14px;padding:7px 15px}
+  /* 章节头 */
+  .chapter-head{padding:24px 26px;margin-bottom:20px;border-radius:12px}
+  .chapter-head .ch{font-size:13.5px}
+  .chapter-head .ti{font-size:23px;margin-top:5px}
+  .chapter-head .meta{font-size:13.5px;margin-top:14px;padding-top:14px;gap:18px}
+  .chtabs{gap:8px;margin-bottom:18px}
+  .chtab{font-size:15px;padding:8px 16px}
+  /* 章节卡片整体放大 */
+  .chgrid{gap:18px;grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
+  .chcard{padding:24px 24px 22px;gap:13px;border-radius:12px}
+  .chcard .no{font-size:13px}
+  .chcard h3{font-size:19px;line-height:1.55}
+  .chcard .meta{font-size:13.5px;gap:6px 16px}
+  .chcard .foot{padding-top:8px;gap:12px}
+  /* 专题卡片整体放大 */
+  .grid{gap:18px}
+  .tcard{padding:24px 24px 22px;gap:12px;border-radius:12px}
+  .tcard h3{font-size:18px;line-height:1.6}
+  .tcard .tag{font-size:13px}
+  .tcard .pts{font-size:13.5px;gap:6px 16px}
+  .tcard .types{font-size:12.5px;gap:6px}
+  .tcard .types span{padding:2px 9px;border-radius:5px}
+  .tcard .foot{padding-top:8px;gap:12px}
+  .tcard .hot{top:18px;right:18px;font-size:12px}
+  .prog{font-size:13px}
+  /* 答题区 */
+  .qcard{padding:24px 26px;border-radius:12px}
+  .stem{font-size:19px;line-height:1.9;margin:4px 0 20px}
+  .opt{padding:11px 14px;font-size:16px}
+  .qmeta{font-size:13.5px}
+  .pv-head .tt{font-size:16px}
+  .concl summary{font-size:14.5px;padding:11px 14px}
+  .cul li{font-size:15px;line-height:1.85}
+  .fillrow input.fill-in{font-size:17.5px}
+  .btn{font-size:14px;padding:7px 15px}
+  .note{font-size:14px;padding:14px 16px;line-height:1.85}
+  .tip{font-size:13.5px}
+}
+
+@media(min-width:1500px){
+  body{font-size:16.5px}
   main{max-width:1500px;padding:26px 32px}
+  .grid{gap:22px}
+  .chgrid{gap:22px;grid-template-columns:repeat(auto-fill,minmax(380px,1fr))}
+  .chcard{padding:28px 28px 26px}
+  .chcard h3{font-size:21px}
+  .chcard .no{font-size:14px}
+  .chcard .meta{font-size:14.5px}
+  .tcard{padding:28px 28px 26px}
+  .tcard h3{font-size:19.5px}
+  .tcard .pts{font-size:14.5px}
+  .tcard .types{font-size:13.5px}
   .qcard{padding:26px 30px}
   .stem{font-size:19px;line-height:1.9}
   .opt{padding:12px 16px;font-size:16.5px}
@@ -305,8 +362,25 @@ textarea:focus,input[type=text]:focus{border-color:var(--brand)}
   .cul li{font-size:15.5px}
 }
 @media(min-width:1800px){
-  body{font-size:17px}
+  body{font-size:18px}
   main{max-width:1740px;padding:28px 36px}
+  .grid{gap:26px}
+  .chgrid{gap:26px;grid-template-columns:repeat(auto-fill,minmax(440px,1fr))}
+  .chcard{padding:34px 34px 30px;border-radius:14px;gap:16px}
+  .chcard h3{font-size:23px}
+  .chcard .no{font-size:15px}
+  .chcard .meta{font-size:15.5px}
+  .chcard .btn{font-size:15px;padding:9px 18px}
+  .tcard{padding:32px 32px 30px;border-radius:14px}
+  .tcard h3{font-size:21px}
+  .tcard .tag{font-size:14.5px}
+  .tcard .pts{font-size:15.5px}
+  .tcard .types{font-size:14.5px}
+  .tcard .types span{padding:3px 11px}
+  .chapter-head{padding:30px 34px}
+  .chapter-head .ti{font-size:27px}
+  .chapter-head .meta{font-size:15px}
+  .tcard .btn{font-size:15px;padding:9px 18px}
   .qcard{padding:30px 36px}
   .stem{font-size:21px;line-height:1.95}
   .opt{padding:14px 18px;font-size:18px}
@@ -315,8 +389,21 @@ textarea:focus,input[type=text]:focus{border-color:var(--brand)}
 }
 
 @media(min-width:2200px){
-  body{font-size:18px}
+  body{font-size:19.5px}
   main{max-width:2100px;padding:32px 40px}
+  .grid{gap:30px}
+  .chgrid{gap:30px;grid-template-columns:repeat(auto-fill,minmax(480px,1fr))}
+  .chcard{padding:40px 40px 36px;gap:18px}
+  .chcard h3{font-size:25px}
+  .chcard .no{font-size:16px}
+  .chcard .meta{font-size:16.5px}
+  .tcard{padding:38px 38px 34px}
+  .tcard h3{font-size:23px}
+  .tcard .pts{font-size:17px}
+  .tcard .types{font-size:15.5px}
+  .chapter-head{padding:34px 40px}
+  .chapter-head .ti{font-size:30px}
+  .chapter-head .meta{font-size:16px}
   .qcard{padding:34px 42px}
   .stem{font-size:23px;line-height:2}
   .opt{padding:16px 20px;font-size:19.5px}
@@ -3062,7 +3149,7 @@ let deferredPrompt = null;
 const btnInstall = document.getElementById('btnInstall');
 window.addEventListener('beforeinstallprompt', e => {
   e.preventDefault(); deferredPrompt = e;
-  if (btnInstall && !localStorage.getItem('pwa_installed')) btnInstall.style.display = '';
+  if (btnInstall && !localStorage.getItem('pwa_installed') && !localStorage.getItem('pwa_hint_shown')) btnInstall.style.display = '';
 });
 function isInStandalone(){return window.matchMedia('(display-mode: standalone)').matches || navigator.standalone===true}
 function isIOS(){return /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)}
@@ -3073,8 +3160,13 @@ if (btnInstall) btnInstall.onclick = () => {
       deferredPrompt=null; btnInstall.style.display='none'; });
   } else if (isIOS()) {
     alert('iPhone 添加到主屏幕：\n\n1. 用 Safari 打开本页\n2. 点底部「分享」按钮（方框往上箭头）\n3. 下滑找到「添加到主屏幕」\n4. 点右上角「添加」\n\n之后桌面就有图标，点开全屏使用，断网也能用。');
+    // iOS 无法由网页直接安装，上面只是说明；看过就记下来，以后不再弹
+    try{ localStorage.setItem('pwa_hint_shown','1') }catch(e){}
+    btnInstall.style.display='none';
   } else {
-    alert('添加到桌面：\n\n安卓 Chrome：右上角 ⋮ → 「安装应用」或「添加到主屏幕」\n\n电脑 Chrome：地址栏右侧的安装图标，或 ⋮ → 「安装 电力系统分析专项练习」');
+    alert('添加到桌面：\n\n安卓 Chrome：右上角 ⋮ → 「安装应用」或「添加到主屏幕」\n\n电脑 Chrome：地址栏右侧的安装图标，或 ⋮ → 「安装 电分必刷」');
+    try{ localStorage.setItem('pwa_hint_shown','1') }catch(e){}
+    btnInstall.style.display='none';
   }
 };
 window.addEventListener('load', () => {
@@ -3082,7 +3174,7 @@ window.addEventListener('load', () => {
     const b = document.getElementById('btnInstall');
     // file:// 下浏览器不允许安装，隐藏按钮（离线靠内嵌数据，本来就能用）
     if (location.protocol === 'file:') { if (b) b.style.display = 'none'; return; }
-    if (b && !isInStandalone() && !localStorage.getItem('pwa_installed')) b.style.display = '';
+    if (b && !isInStandalone() && !localStorage.getItem('pwa_installed') && !localStorage.getItem('pwa_hint_shown')) b.style.display = '';
   }, 800);
 });
 </script>
